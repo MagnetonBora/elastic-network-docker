@@ -11,5 +11,6 @@ ADD start.sh /home/john
 
 RUN cd /home/john ; git clone https://github.com/MagnetonBora/elastic_network.git
 RUN cd /home/john/elastic_network ; pip install -r requirements.txt
+RUN cd /home/john/elastic_network ; mkdir -p data/graphs ; cp examples/* data/graphs/
 
 CMD "/home/john/start.sh"
